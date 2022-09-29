@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddExpenditureToGroupExpenditure < ActiveRecord::Migration[7.0]
   def change
     add_reference :group_expenditures, :expenditure, null: false, foreign_key: true
