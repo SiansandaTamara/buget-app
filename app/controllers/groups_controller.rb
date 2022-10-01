@@ -9,8 +9,6 @@ class GroupsController < ApplicationController
   end
 
   def show
-    # @user = current_user.id
-    # @group = Group.find_by(id: params[:id])
     @expenditures = Expenditure.all.where(group_id: @group.id)
   end
 
@@ -53,6 +51,7 @@ class GroupsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def group_params
-    params.require(:group).permit!
+    params.require(:group).permit(:name, :icon)
+
   end
 end
