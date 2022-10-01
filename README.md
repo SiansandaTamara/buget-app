@@ -1,73 +1,94 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-#  Budget app
+# Budget-app
+> Money Wallet is a mobile web application that allows you to manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+----
+_[Here](https://drive.google.com/file/d/1gzTESqGQUBQ-7ebR3fyBBLy7vVLLDWYq/view?usp=sharing) is the link to the project presentation video_
 
-###  The Budget app keeps track of all your orders money. 
+_[Here](https://powerful-stream-89137.herokuapp.com/) is the link to the live demo_
 
-[livelink](unavailable)
+---
+  ![Screenshot from 2022-09-09 01-25-18](unavailable)
 
-This README documents steps necessary to get the application up and running.
+
+# Getting Started
 
 
-* Ruby version
-  - 3.1.2
-* PSQL version
-  - PostgreSQL 14.0
 
-* System dependencies
-  - See [Dependencies](./Gemfile) gem file
 
-* Configuration
-  - Install ruby  - [Installation guides](https://www.ruby-lang.org/en/documentation/installation/)
-  - install PostgreSQL - [Installation guides](https://www.postgresql.org/download/linux/)
-  - install libpqdev ``` sudo apt install libpq-dev  ``` for linux debian users
-  - Make sure your Postgresql is running. If not, start the service by typing ```sudo service postgresql start``` in your terminal (for linux debian users)
 
-* Installation 
-  - ```git clone``` this [repo](https://github.com/siansandatamara/Budget-app)
-  - Run:
-    - ```cd Budget-app```
-    - ```bundle install```
-  
-* Database creation
-  - Run
-       - ```rake db:create```
 
-* Tests
-  - Run (*ensure your postgreSQL is running as well*)
-      - Integrations
-        - **Method 1:** ```bundle exec rspec test/integration/ ```
-        > if fails, try
-        - **Method 2:**  ```rspec test/integration/```
+_To get a local copy up and running follow these simple steps._
 
-* Run project
-  - ```rails db:migrate:reset db:seed``` then
-  - Run ```rails s``` and visit [http://localhost:3000/](http://localhost:3000/) in your browser!
+1. Clone the repo
+   ```sh
+   git@github.com:mandelatuks/Budget-app.git
+   ```
+2. Goto project directory
+   ```sh
+   cd budget-app
+   ```
 
-<!-- * Database initialization -->
+3. Configure `database.yml` in the config folder according to your postgreSQL configuration
+4. Run app
+   ```sh
+   rails server
+   ```
+   or
+   ```sh
+   rails s
+   ```
 
-<!-- * How to run the test suite -->
 
-<!-- * Services (job queues, cache servers, search engines, etc.) -->
+# Testing
 
-<!-- * Deployment instructions -->
+`bundle exec rspec spec` will run all the tests.
+
+Also, you can run `bundle exec rspec spec/` to run specific tests.
+
+You can also run `RAILS_ENV=test rspec spec/` to run the tests in test mode.
+
+## Errors
+
+If you encounter any errors, run the following commands.
+
+- Run `rails db:drop db:create db:migrate` to drop, create and migrate a new database.
+
+- Run `rubocop && rubocop -A` to check for and fix code errors.
+
+# This project was built with
+
+- Ruby on Rails
+
+- PostgreSQL
+
+- Bootstrap CSS Framework
+
+# Author
+
+
 ## Authors
-
 👤 **Tamara Siansanda**
 
 - GitHub: [@SiansandaTamara](https://github.com/SiansandaTamara)
 - Twitter: [@twitterhandle](https://twitter.com/TamaraSiansanda)
 
-## 🤝 Contributing
+# 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/SiansandaTamara/rails-budget-app/issues).
+Feel free to check the [issues page].
 
-## Show your support
+# Show your support
 
 Give a ⭐️ if you like this project!
 
-## 📝 License
+# Acknowledgement
+
+- Hat tip to anyone whose code was a source of inspiration.
+- A big thanks to [@microverseinc](https://github.com/microverseinc).
+- The design template provider [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+
+# 📝 License
 
 This project is [MIT](./MIT.md) licensed.
