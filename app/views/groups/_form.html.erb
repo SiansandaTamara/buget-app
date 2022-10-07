@@ -1,0 +1,15 @@
+<div class="form">
+<%= form_with model: [@user, @group] do |form| %>
+
+  <div>
+    <%= form.text_field :name, placeholder: "Group Name" %>
+  </div>
+
+  <div>
+  <%= form.file_field :icon, placeholder: "Image or Icon",  required: true %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>
